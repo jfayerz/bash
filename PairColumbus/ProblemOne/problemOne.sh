@@ -37,6 +37,24 @@ whileLoop(){
 	echo "$i" 
 	}
 
+recurseSum()
+{
+  echo $x
+  local x=$1
+  if [ $1 -gt 1 ]
+  then  
+    echo $1
+    recurseSum $(($1 - 1))
+    echo $x
+  fi
+}
+
+# i don't really understand the recursive function here
+# it's clearly doing something, but i don't have it 
+# right yet
+
 whileLoop
 
 forLoop
+
+recurseSum ${#arr[@]}
